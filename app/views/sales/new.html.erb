@@ -1,0 +1,33 @@
+<%= form_with model: @sale, local: true do |i| %>
+<ul>
+  <li>
+  <%= i.label :detail, "Detalle" %>
+  <%= i.text_area :detail %>
+  </li>
+  <br>
+  <li>
+  <%= i.label :category, "Categoría" %>
+  <%= i.text_field :category %>
+  </li>
+  <br>
+  <li>
+  <%= i.label :value, "Valor" %>
+  <%= i.number_field :value %>
+  </li>
+  <br>
+  <li>
+  <%= i.label :discount, "Descuento" %>
+  <%= i.number_field :discount %>
+  </li>
+  <br>
+  <li>
+  <%= i.label :detail, "Exento de IVA" %>
+  <%= i.check_box :tax %>
+  </li>
+  <br>
+  <li>
+  <%= i.submit "Enviar"%>
+  </li>
+</ul>
+
+<% end %>
